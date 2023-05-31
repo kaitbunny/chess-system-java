@@ -6,16 +6,14 @@ public class Board {
 	private Piece[][] pieces;
 	
 	//constructors
-	public Board() {
-		
-	}
-	
-	public Board(int rows, int columns) {
+		public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
 		pieces = new Piece[rows][columns];
 	}
-
+	
+	
+	//getter and setters
 	public int getRows() {
 		return rows;
 	}
@@ -28,8 +26,16 @@ public class Board {
 		return columns;
 	}
 
+	//methods
 	public void setColumns(int columns) {
 		this.columns = columns;
 	}
-
+	
+	public Piece Piece(int row, int column) {
+		return pieces [row][column];
+	}
+	
+	public Piece Piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }
